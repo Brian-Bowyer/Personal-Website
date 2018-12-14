@@ -1,0 +1,19 @@
+$primary-font-color: #fff;
+
+body {
+    color: $primary-font-color;
+    background: #222;
+}
+
+nav {
+    background: #000;
+    ul {
+        li {
+            display: inline;
+            padding: 1px;
+            a {
+                color: $primary-font-color;
+            }
+        }
+    }
+}
