@@ -15,6 +15,16 @@
     </header>
 {% endblock %}
 
+{% block content %}
+<footer class='container-fluid'>
+    <div class='row'>
+        <div class='column'>
+            Footer
+        </div>
+    </div>
+</footer>
+{% endblock %}
+
 {% block styles %}
     {{super()}}
     <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
