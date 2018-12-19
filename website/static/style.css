@@ -1,14 +1,20 @@
-body {
-  color: #fff;
-  background: #222; }
+html, main, .row {
+  height: 100%; }
 
-  nav {
-    background: #000; }
-    nav ul li {
-      display: inline;
-      padding: 1px; }
-      nav ul li a {
-        color: #fff; }
+  body {
+    color: #fff;
+    background: #003341;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
+        Geneva, Verdana, sans-serif;
+    height: 100%; }
+
+    nav {
+      background: #000; }
+      nav ul li {
+        display: inline;
+        padding: 1px; }
+        nav ul li a {
+          color: #fff; }
 
 footer {
   background: #000;
@@ -17,3 +23,25 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center; }
+
+  .content-card, .project-card {
+    background: #000;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 #111; }
+
+    .content-card {
+      height: 90%; }
+      .content-card h1 {
+        text-align: center; }
+        .content-card img {
+          width: 300px; }
+
+.project-card .project-img img {
+  width: 150px;
+  height: 150px; }
+.project-card .project-text {
+  position: fixed;
+  top: 0; }
