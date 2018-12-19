@@ -1,12 +1,22 @@
 $primary-font-color: #fff;
+$primary-background-color: #003341;
+$offset-background-color: #000;
+$shadow-color: #111;
+
+html, main, .row {
+    height: 100%;
+}
 
 body {
     color: $primary-font-color;
-    background: #222;
+    background: $primary-background-color;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100%;
 }
 
+
 nav {
-    background: #000;
+    background: $offset-background-color;
     ul {
         li {
             display: inline;
@@ -19,10 +29,50 @@ nav {
 }
 
 footer {
-    background: #000;
+    background: $offset-background-color;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
 }
+
+%card{
+    background: $offset-background-color;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 $shadow-color;
+}
+
+.content-card{
+    @extend %card;
+    height: 90%;
+    h1 {
+        text-align: center;
+    }
+    img {
+        width: 300px;
+    }
+}
+
+.project-card{
+    @extend %card;
+    .project-img{
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    
+    .project-text{
+        position: fixed;
+        top: 0;
+    }
+}
+
+
+
+
+
