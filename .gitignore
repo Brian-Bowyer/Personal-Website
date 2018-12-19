@@ -1,4 +1,7 @@
 .pytest_cache/v/cache/nodeids
-.vscode/*
-.site-env/*
+.vscode
+.site-env
+.webassets-cache
 *.pyc
+website/static
+website/static/style.css
