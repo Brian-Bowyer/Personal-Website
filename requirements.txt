@@ -4,6 +4,7 @@ dominate==2.3.5
 Flask==1.0.2
 Flask-Bootstrap==3.3.7.1
 Flask-Email==1.4.4
+Flask-Mail==0.9.1
 Flask-Scss==0.5
 Flask-WTF==0.14.2
 itsdangerous==1.1.0

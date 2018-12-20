@@ -31,10 +31,17 @@ PROJECTS = [
 
 def create_app(test_config=None):
     app = Flask(__name__)
+    app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
+    app.config["MAIL_SERVER"] = "smtp.gmail.com"  # wouldn't hardcode this if it wasn't a personal site, but I know for a fact I use gmail
+    app.config["MAIL_PORT"] = 465
+    app.config["MAIL_USE_SSL"] = True
+    app.config["MAIL_USERNAME"] = os.environ['EMAIL_USER']
+    app.config["MAIL_PASSWORD"] = os.environ['EMAIL_PASS']
+    
     Bootstrap(app)
     Scss(app)
     CSRFProtect(app)
-    app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
+    mail = Mail(app)
 
     @app.route('/')
     def index():
@@ -52,6 +59,9 @@ def create_app(test_config=None):
     def contact():
         form = ContactForm()
         if form.validate_on_submit():
+            msg = Message(form.subject.data, sender=app.config['MAIL_USERNAME'], recipients=[app.config['MAIL_USERNAME']])
+            msg.body = f"Someone sent you a message from brianbowyer.com:\n\nFrom {form.name.data} <{form.email.data}>\n{form.message.data}"
+            mail.send(msg)
             return redirect('/success')
         elif request.method == 'POST':  # this means that we failed validation
             for key, error_list in form.errors.items():
