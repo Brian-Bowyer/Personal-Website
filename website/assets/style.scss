@@ -3,8 +3,14 @@ $primary-background-color: #003341;
 $offset-background-color: #000;
 $shadow-color: #111;
 
-html, main, .row {
-    height: 100%;
+%card{
+    background: $offset-background-color;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 $shadow-color;
+    text-align: center;
 }
 
 body {
@@ -12,8 +18,12 @@ body {
     background: $primary-background-color;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 100%;
+    font-size: 17px;
 }
 
+html, main, .row {
+    height: 100%;
+}
 
 nav {
     background: $offset-background-color;
@@ -37,23 +47,25 @@ footer {
     text-align: center;
 }
 
-%card{
-    background: $offset-background-color;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 $shadow-color;
+form {
+    label {
+        text-align: center;
+    }
+    input {
+        width: 100%;
+        color: $offset-background-color;
+    }
+    textarea {
+        width: 100%;
+        color: $offset-background-color;
+    }
 }
 
 .content-card{
     @extend %card;
-    height: 90%;
+    height: 75%;
     h1 {
         text-align: center;
-    }
-    img {
-        width: 300px;
     }
 }
 
@@ -71,7 +83,6 @@ footer {
         top: 0;
     }
 }
-
 
 
 
