@@ -1,10 +1,11 @@
 $primary-font-color: #fff;
 $primary-background-color: #003341;
-$offset-background-color: #000;
+$secondary-background-color: #000;
+$tertiary-background-color: #400;
 $shadow-color: #111;
 
 %card{
-    background: $offset-background-color;
+    background: $secondary-background-color;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -25,21 +26,24 @@ html, main, .row {
     height: 100%;
 }
 
-nav {
-    background: $offset-background-color;
-    ul {
-        li {
-            display: inline;
-            padding: 1px;
-            a {
-                color: $primary-font-color;
+header {
+    background: $secondary-background-color;
+    nav {
+        ul {
+            li {
+                display: inline;
+                padding: 1px;
+                a {
+                    color: $primary-font-color;
+                }
             }
         }
     }
+
 }
 
 footer {
-    background: $offset-background-color;
+    background: $secondary-background-color;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -53,12 +57,19 @@ form {
     }
     input {
         width: 100%;
-        color: $offset-background-color;
+        color: $secondary-background-color;
     }
     textarea {
         width: 100%;
-        color: $offset-background-color;
+        color: $secondary-background-color;
     }
+}
+
+.flash{
+    text-align: center;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: $tertiary-background-color;
 }
 
 .content-card{

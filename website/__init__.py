@@ -1,10 +1,11 @@
 import os
 from collections import namedtuple
 
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, flash, request
 from flask_scss import Scss
 from flask_bootstrap import Bootstrap
 from flask_wtf.csrf import CSRFProtect
+from flask_mail import Message, Mail
 
 from .forms import ContactForm
 
@@ -52,6 +53,10 @@ def create_app(test_config=None):
         form = ContactForm()
         if form.validate_on_submit():
             return redirect('/success')
+        elif request.method == 'POST':  # this means that we failed validation
+            for key, error_list in form.errors.items():
+                for error in error_list:
+                    flash(error)
         return render_template('contact.html', form=form)
 
     @app.route('/success')

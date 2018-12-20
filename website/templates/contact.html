@@ -7,6 +7,15 @@
     <div class="row">
         <div class='col content-card'>
             <h2>Contact</h2>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class=flash>
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
             <form action="{{ url_for('contact') }}" method=post>
                 {{ form.csrf_token }}
                 <p>

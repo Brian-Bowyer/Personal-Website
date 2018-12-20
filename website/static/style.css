@@ -18,12 +18,12 @@
     html, main, .row {
       height: 100%; }
 
-      nav {
+      header {
         background: #000; }
-        nav ul li {
+        header nav ul li {
           display: inline;
           padding: 1px; }
-          nav ul li a {
+          header nav ul li a {
             color: #fff; }
 
 footer {
@@ -43,10 +43,16 @@ footer {
         width: 100%;
         color: #000; }
 
-.content-card {
-  height: 75%; }
-  .content-card h1 {
-    text-align: center; }
+.flash {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: #400; }
+
+  .content-card {
+    height: 75%; }
+    .content-card h1 {
+      text-align: center; }
 
 .project-card .project-img img {
   width: 150px;
