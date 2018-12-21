@@ -8,11 +8,13 @@
     {% for project in PROJECTS %}
     <div class="row project-card">
         <div class="col-sm-2 project-img">
-            <img src="{{url_for('.static', filename=project['filename'])}}">
+            <a href="{{url_for('.static', filename=project['filename'])}}" data-lightbox="{{project['title']}}">
+                <img src="{{url_for('.static', filename=project['filename'])}}">
+            </a>
         </div>
         <div class="col-sm-10 project-text">
             <h3>{{project['title']}}</h3>
-            <p>{{project['description']}}</p>        
+            <p>{{project['description']}}</p>
             <div class='links'>
                 {% if project['github_link'] is not none %}
                     <a href="{{project['github_link']}}">Github Repository</a>
