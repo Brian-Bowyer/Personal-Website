@@ -4,8 +4,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 #111;
-  text-align: center; }
+  box-shadow: 0 4px 8px 0 #111; }
 
   body {
     color: #fff;
@@ -13,7 +12,8 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
         Geneva, Verdana, sans-serif;
     height: 100%;
-    font-size: 17px; }
+    font-size: 17px;
+    text-align: center; }
 
     header {
       background: #000; }
@@ -33,12 +33,12 @@ footer {
   footer a {
     text-decoration: underline; }
 
-form label {
-  text-align: center; }
-  form input {
+.contact-form {
+  text-align: left; }
+  .contact-form input {
     width: 100%;
     color: #000; }
-    form textarea {
+    .contact-form textarea {
       width: 100%;
       color: #000; }
 
