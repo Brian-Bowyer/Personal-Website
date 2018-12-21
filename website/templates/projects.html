@@ -10,12 +10,21 @@
         <div class="col-sm-2 project-img">
             <img src="{{url_for('.static', filename=project['filename'])}}">
         </div>
-        <div class="col-sm-10" class='project-text'>
+        <div class="col-sm-10 project-text">
             <h3>{{project['title']}}</h3>
-            <p>{{project['description']}}</p>
+            <p>{{project['description']}}</p>        
+            <div class='links'>
+                {% if project['github_link'] is not none %}
+                    <a href="{{project['github_link']}}">Github Repository</a>
+                {% endif %}
+                {% if project['live_link'] is not none %}
+                    <a href="{{project['live_link']}}">Live Link</a>
+                {% endif %}
+            </div>
         </div>
+
     </div>
     {% endfor %}
 </div>
-
+{{super()}}
 {% endblock %}
