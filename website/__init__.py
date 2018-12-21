@@ -1,5 +1,4 @@
 import os
-from collections import namedtuple
 
 from flask import Flask, render_template, redirect, flash, request
 from flask_scss import Scss
@@ -8,26 +7,7 @@ from flask_wtf.csrf import CSRFProtect
 from flask_mail import Message, Mail
 
 from .forms import ContactForm
-
-Project = namedtuple('Project', ['filename', 'title', 'description'])
-PROJECTS = [
-    #Project('bagofnouns.jpg', 
-    #        "Bag of Nouns", 
-    #        "Web app to play the game Bag of Nouns (also sometimes called Monikers)"),
-    #Project('bta.jpg', 
-    #        "Bubble Turtle Adventure", 
-    #        "Sidescrolling video game"),
-    Project('blorb.png', 
-            "Blorb", 
-            "Procedurally generated resource-collecting video game with infinite map"),
-    #Project('story_scraper.jpg', 
-    #        "Story Scraper", 
-    #        "Computational linguistics class project which scraped large amounts of fanfiction to produce linguistic corpus"),
-    Project('self.jpg', 
-            "This Very Website", 
-            "This website! The one that you are reading right now.")
-]
-
+from .projects import PROJECTS
 
 def create_app(test_config=None):
     app = Flask(__name__)
