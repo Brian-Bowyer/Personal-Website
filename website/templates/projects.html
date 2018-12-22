@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="container">
+<main class="container">
     {% for project in PROJECTS %}
     <div class="row project-card">
         <div class="col-sm-2 project-img">
@@ -27,6 +27,6 @@
 
     </div>
     {% endfor %}
-</div>
+</main>
 {{super()}}
 {% endblock %}
