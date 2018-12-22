@@ -8,7 +8,7 @@ PROJECTS = [
     #Project('bagofnouns.jpg', 
     #        "Bag of Nouns", 
     #        "Web app to play the game Bag of Nouns (also sometimes called Monikers)"),
-    Project(filename='discord_bot.jpg', 
+    Project(filename='discord-bot.jpg', 
             title="Dice Roller Bot", 
             description="Discord bot written in Python to roll dice according to VtR rules.",
             github_link='https://github.com/Brian-Bowyer/Discord-VTR-Dice'),
